@@ -1,0 +1,31 @@
+// User function Template for Java
+
+class Solution {
+    int[][] sortedMatrix(int N, int Mat[][]) {
+        // code here
+        ArrayList<Integer>res=new ArrayList<>();
+        for(int i=0;i<N;i++)
+        {
+            ArrayList<Integer>ans=new ArrayList<>();
+            for(int j=0;j<Mat[i].length;j++)
+            {
+                res.add(Mat[i][j]);
+            }
+           
+        }
+        
+        Collections.sort(res);
+        
+        int index=0;
+        int[][]tem=new int[N][N];
+        for(int i=0;i<N;i++)
+        {
+            for(int j=0;j<N;j++)
+            {
+                tem[i][j]=res.get(index++);
+            }
+        }
+        
+        return tem;
+    }
+}
